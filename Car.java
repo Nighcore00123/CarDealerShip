@@ -7,8 +7,8 @@ public class Car {
     
     public Car(String model, int manufacturingDate, int carNumber){
         this.m_model = model;
-        this.m_manufacturingDate = manufacturingDate;
-        this.m_carNumber = carNumber;
+        this.m_manufacturingDate = 0;
+        this.m_carNumber = 0;
     }
 
     public String getModel() {
