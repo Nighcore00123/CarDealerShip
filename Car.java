@@ -32,6 +32,12 @@ public class Car {
         this.m_manufacturingDate = manufacturingDate;
     }
 
+    public void removeCars() {
+        this.m_model = null;
+        this.m_manufacturingDate = 0;
+        
+    }
+
     public boolean freeSlot(){
         return(this.m_model == null);
     }

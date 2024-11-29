@@ -19,7 +19,7 @@ public class dealership {
         populate_Cars();
     }
 
-    public void add_Car () {
+    public void addCar () {
         int carNumber = 0;
         System.out.println("Please enter the Model");
         String model_Name = user_Input.next();
@@ -40,7 +40,17 @@ public class dealership {
 
         }
     }
+    public void removeCars() {
 
+        System.out.println("Which car would you like to remove?");
+        int carNumberToRemove = user_Input.nextInt();
+        Car carToRemove = amount_Of_Cars.get(carNumberToRemove);
+
+        if(!carToRemove.freeSlot()) {
+            carToRemove.removeCars();
+        }
+
+    }
     public void viewCars() {
         if(!amount_Of_Cars.isEmpty()) {
             for (Car car : amount_Of_Cars) {
@@ -51,8 +61,6 @@ public class dealership {
 
         }
     }
-
-
     public static void main(String[] args) {
 
         dealership Manager = new dealership();
@@ -62,7 +70,8 @@ public class dealership {
             System.out.println("WELCOME.. These are your options:");
             System.out.println("1: View Cars");
             System.out.println("2: Add Car to collection");
-            System.out.println("3: quit");
+            System.out.println("3: Remove a Car of your choice");
+            System.out.println("4: Quit");
             int choice = user_Input.nextInt();
             
             switch (choice) {
@@ -70,10 +79,14 @@ public class dealership {
                     Manager.viewCars();
                     break;
                 case 2:
-                    Manager.add_Car();
-                    break; //i dont understand why its "Manager." to call Public void add_Car
+                    Manager.addCar();
+                    break; //i dont understand why its "Manager." to call Public void addCar
                 case 3:
+                    Manager.removeCars();
+                    break;
+                case 4:
                     quit = true;
+                    break;
     
             }
         }
