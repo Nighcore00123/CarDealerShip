@@ -7,8 +7,8 @@ public class Car {
     
     public Car(String model, int manufacturingDate, int carNumber){
         this.m_model = model;
-        this.m_manufacturingDate = 0;
-        this.m_carNumber = 0;
+        this.m_manufacturingDate = manufacturingDate;
+        this.m_carNumber = carNumber;
     }
 
     public String getModel() {
@@ -30,5 +30,9 @@ public class Car {
     }
     public void setManufacturingDate(int manufacturingDate) {
         this.m_manufacturingDate = manufacturingDate;
+    }
+
+    public boolean freeSlot(){
+        return(this.m_model == null);
     }
 }
