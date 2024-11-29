@@ -72,6 +72,7 @@ public class dealership {
                 case 2:
                     Manager.add_Car();
                     break; //i dont understand why its "Manager." to call Public void add_Car
+                // because youve called it manager, the dealership "manages" cars call it 'holy_moly_its_a_flying_hot_dog' but its novery idomatic java :)
                 case 3:
                     quit = true;
     
