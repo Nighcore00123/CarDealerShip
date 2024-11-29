@@ -19,7 +19,7 @@ public class Car {
     }
     public int getCarNumber () {
         return m_carNumber;
-}
+    }
 
     public void setModel(String model) {
         this.m_model = model;
