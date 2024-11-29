@@ -31,4 +31,8 @@ public class Car {
     public void setManufacturingDate(int manufacturingDate) {
         this.m_manufacturingDate = manufacturingDate;
     }
+
+    public boolean freeSlot(){
+        return(this.m_model == null);
+    }
 }
