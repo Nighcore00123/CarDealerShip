@@ -11,28 +11,13 @@ public class Car {
         this.m_carNumber = carNumber;
     }
 
-    public String getModel() {
-        return m_model;
-    }
-    public int getManufacturingDate () {
-        return m_manufacturingDate;
-    }
-    public int getCarNumber () {
-        return m_carNumber;
-    }
+    public String getModel() { return m_model; }
+    public int getManufacturingDate () { return m_manufacturingDate; }
+    public int getCarNumber () { return m_carNumber; }
 
-    public void setModel(String model) {
-        this.m_model = model;
-        
-    }
-    public void setCarNumber (int carNumber) {
-        this.m_carNumber = carNumber;
-    }
-    public void setManufacturingDate(int manufacturingDate) {
-        this.m_manufacturingDate = manufacturingDate;
-    }
+    public void setModel(String model) { this.m_model = model; }
+    public void setCarNumber (int carNumber) { this.m_carNumber = carNumber; }
+    public void setManufacturingDate(int manufacturingDate) { this.m_manufacturingDate = manufacturingDate; }
 
-    public boolean freeSlot(){
-        return(this.m_model == null);
-    }
+    public boolean freeSlot(){ return (this.m_model == null); }
 }
