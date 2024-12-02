@@ -9,7 +9,7 @@ public class dealership {
 
 
     public void populate_Cars(){
-        for(int i  = 0; i < 5; i++){
+        for(int i  = 0; i < 3; i++){
             
             amount_Of_Cars.add(new Car(null, 0, i));
         }
@@ -41,11 +41,15 @@ public class dealership {
         }
     }
     public void removeCars() {
+        int carNumberToRemove = 0;
 
         System.out.println("Which car would you like to remove?");
-        int carNumberToRemove = user_Input.nextInt();
+        if(user_Input.nextInt() >= amount_Of_Cars.size()) {
+            System.out.println("No such space");
+            removeCars();
+        }
         Car carToRemove = amount_Of_Cars.get(carNumberToRemove);
-
+        user_Input.nextLine();
         if(!carToRemove.freeSlot()) {
             carToRemove.removeCars();
         }
@@ -57,8 +61,7 @@ public class dealership {
                 System.out.println("Car number: " + car.getCarNumber() + ", Car Model: " + car.getModel() + ", Car Manufacturing Date: " + car.getManufacturingDate());
             }
         }else {
-            System.out.println("No cars in storage :( ");
-
+            System.out.println("Your Garage is Empty :(");
         }
     }
     public static void main(String[] args) {
